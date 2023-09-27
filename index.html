@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather App</title>
+    <style>
+        /* Style for the navbar */
+        .navbar {
+            background: linear-gradient(to right, #87CEFA, white);
+            border-bottom: 2px solid blue; /* Add a blue border to the navbar */
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1;
+            display: flex;
+            align-items: center; /* Center vertically */
+            height: 50px; /* Adjust the height as needed */
+        }
+
+        /* Style for the content box below the navbar */
+        .content-box {
+            background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent white background for better readability */
+            padding: 20px;
+            margin-top: 50px;
+            position: relative;
+            text-align: center; /* Center text horizontally */
+        }
+
+        /* Style for the black border around the content area */
+        body {
+            margin: 0; /* Remove default margin */
+            border: 2px solid black; /* Add a black border around the entire web page */
+            background-image: url('pic.png'); /* Set the background image */
+            background-size: cover; /* Cover the entire background */
+            background-position: center; /* Center the background image */
+            background-attachment: fixed; /* Fixed background image */
+        }
+
+        /* Style for the search container */
+        .search-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center horizontally within the content box */
+            margin-top: 20px; /* Adjust the top margin as needed */
+        }
+
+        /* Add additional styles for your content here */
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a class="navbar-brand"><h1>Weather App</h1></a>
+    </nav>
+
+    <!-- Content box below the navbar -->
+    <div class="content-box">
+        <!-- Your content goes here -->
+        <h1>Welcome to the Weather App</h1>
+        <p>Here you can search the weather of your city.</p>
+
+        <!-- Centered search container -->
+        <div class="search-container">
+            <label for="cityInput">Enter City Name:</label>
+            <input type="text" id="cityInput" placeholder="City Name">
+            <button id="fetchWeatherBtn">Fetch Weather</button>
+            <div id="weatherForecast"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
